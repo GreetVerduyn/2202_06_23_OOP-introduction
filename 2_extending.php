@@ -1,21 +1,7 @@
 <?php
 
 declare(strict_types=1);
-// class Beverage
-class Beverage {
-    public string $color;
-    public float $price;
-    public string $temperature;
 
-    public function __construct(float $price, string $color) {
-        $this->price= $price;
-        $this->color= $color;
-        $this->temperature ="cold";
-    }
-    public function get_info(): void {
-        echo "This beverage is $this->temperature and $this->color";
-    }
-}
 
 /* EXERCISE 2
 
@@ -33,6 +19,23 @@ Make sure that each print is on a different line.
 Try to get this error on the screen= Fatal error: Uncaught Error: Call to undefined method Beverage::getAlcoholPercentage() in /var/www/becode/workshop/exercise2.php on line 64
 USE TYPEHINTING EVERYWHERE!
 */
+
+// class Beverage
+class Beverage {
+    public string $color;
+    public float $price;
+    public string $temperature;
+
+    public function __construct(float $price, string $color) {
+        $this->price= $price;
+        $this->color= $color;
+        $this->temperature ="cold";
+    }
+    public function get_info(): void {
+        echo "This beverage is $this->temperature and $this->color";
+    }
+}
+
 
 // class Beer
 class Beer extends Beverage {

@@ -139,9 +139,11 @@ Copy the classes of exercise 2.
 https://www.php.net/manual/en/language.oop5.constants.php
 
 - [x] Create a function in beverage and use the constant.
-- [] Do the same in the beer class.
-- [] Print the output of these functions on the screen.
-- [] Make sure that every print is on a new line.
+- [x] Do the same in the beer class.
+- [x] Print the output of these functions on the screen.
+    * you need to make a new beer because an object from the beverage class can not enter a function from the beer class
+- [x] Make sure that every print is on a new line.
+    * using echo "<br>" between each echo
 
 Use typehinting everywhere!
 */
