@@ -10,46 +10,65 @@
 OOP - `Object Orientated Programming` - focuses on the objects that developers want to manipulate rather than the logic required to manipulate them. 
 This approach to programming is well-suited for programs that are large, complex and actively updated or maintained.
 
-## The objective
-
-> Lost for a second? Have a look at [this example](#an-example)
-
 ### 🌱 Must haves - the basics
 
-/* EXERCISE 1
-TODO: Create a class beverage.
-TODO: Create the properties color (string), price (float) and temperature (string) and also foresee a construct.
-TODO: Have a default value "cold" in the construct for temperature.
+`A CLASS is a blueprint. It is a piece of code describing how to manage a topic or task in the way we want.`
 
-Remember for now we will use properties and methods that can be accessed from everywhere.
-TODO: Make a getInfo function which returns "This beverage is <temperature> and <color>."
-TODO: Instantiate an object which represents cola. Make sure that the color is set to black, the price equals 2 euro and the temperature to cold automatically
-print the getInfo on the screen.
-TODO: Print the temperature on the screen.
+
+`An OBJECT is an instance of a class. It is like a house built from the blueprint. +
+ You can build more than one object from a class like creating multiple houses from a blueprint.`
+
+
+`PROPERTIES are variables of an object. They are the values associated with the object. +
+They describe the appearance of the Object.`
+
+
+`METHODS (In Object Oriented Programming in PHP) are functions inside classes. +
+Methods are actions that are performed on Objects`
+
+`Types of Visibility +
+Public - Can be accessed from everywhere +
+Private - Can only be accessed within the class +
+Protected - Can be accessed by the class declared it and by the classes that inherit the above declared class.`
+
+
+
+### EXERCISE 1
+
+- [x] Create a class beverage `a class starts with a capital!!!`
+- [x] Create the properties color (string), price (float) and temperature (string) and also foresee a construct.
+- [x] Have a default value "cold" in the construct for temperature.
+
+_Remember for now we will use properties and methods that can be accessed from everywhere._
+
+ - [x] Make a getInfo function which returns "This beverage is <temperature> and <color>."
+ - [x] Instantiate an object which represents cola. Make sure that the color is set to black, the price equals 2 euro and the temperature to cold automatically
+    print the getInfo on the screen.
+- [x]Print the temperature on the screen.
 
 USE TYPEHINTING EVERYWHERE!
-*/
 
-/* EXERCISE 2
+### EXERCISE 2
 
-TODO: Make class beer that extends from Beverage.
-TODO: Create the properties name (string) and alcoholPercentage (float).
-TODO: Foresee a construct that's allows us to use all the properties from beverage and that sets the values for name and alcoholpercentage.
+- [x] Make class beer that extends from Beverage.
+- [x] Create the properties name (string) and alcoholPercentage (float).
+- [x] Foresee a construct that's allows us to use all the properties from beverage and that sets the values for name and alcoholpercentage.
 
-Remember for now we will use properties and methods that can be accessed from everywhere.
-TODO: Make a getAlcoholPercentage function which returns the alocoholPercentage.
-TODO: Instantiate an object which represents Duvel. Make sure that the color is set to blond, the price equals 3.5 euro and the temperature to cold automatically.
-TODO: Also the name equal to Duvel and the alcohol percentage to 8,5%
-TODO: Print the getAlcoholPercentage 2 times on the screen in two different ways, print the color on the screen and the getInfo.
+_Remember for now we will use properties and methods that can be accessed from everywhere._
+
+- [x] Make a getAlcoholPercentage function which returns the alocoholPercentage.
+- [x] Instantiate an object which represents Duvel. Make sure that the color is set to blond, the price equals 3.5 euro and the temperature to cold automatically.
+- [x] Also the name equal to Duvel and the alcohol percentage to 8,5%
+- [x] Print the getAlcoholPercentage 2 times on the screen in two different ways, print the color on the screen and the getInfo._
 
 Make sure that each print is on a different line.
 Try to get this error on the screen= Fatal error: Uncaught Error: Call to undefined method Beverage::getAlcoholPercentage() in /var/www/becode/workshop/exercise2.php on line 64
 USE TYPEHINTING EVERYWHERE!
-*/
+
 
 ### 🌱 Must haves - digging deeper
--
-/* EXERCISE 3
+
+### EXERCISE 3
 
 - [x] Copy the code of exercise 2 to here and delete everything related to cola.
 - [x] Make all properties private.
@@ -62,41 +81,75 @@ USE TYPEHINTING EVERYWHERE!
 Make sure that you use the variables and not just this text line.
 
 - [x] Print this method on the screen on a new line.
-      caal the funcion in the string (USING "text. function.tet")
+      call the function in the string (USING "text. function.tet")
 
 USE TYPEHINTING EVERYWHERE!
-*/
 
-/* EXERCISE 4
+
+### EXERCISE 4
 
 Copy the code of exercise 2 to here and delete everything related to cola.
-
 - [x]: Make all properties protected.
 - [x]: Make all the other prints work without error without changing the beverage class.
     I had to make a public function te call the private function
 USE TYPEHINTING EVERYWHERE!
-*/
-/* EXERCISE 5
+
+
+### EXERCISE 5
 
 Copy the class of exercise 1.
 
-- [X] Change the properties to private.
+- [x] Change the properties to private.
 - [x] Fix the errors without using getter and setter functions. NO ERRORS FOUND
 - [x] Change the price to 3.5 euro and print it also on the screen on a new line.
         * create a new function to change the price
         * create function to echo the price
-*/
+
 
 
 ### 🌼 Nice to haves
-* EXERCISE 6
+### EXERCISE 6
 
 Copy the classes of exercise 2.
 
-- [] Change the properties to private.
-- [] Make a const barname with the value 'Het Vervolg'.
-- [] Print the constant on the screen.
+- [x] Change the properties to private.
+- [x] Make a const barname with the value 'Het Vervolg'.
+    * !!! Prior to PHP 8.0.0, constants defined using the define() function may be case-insensitive.
+    * Using "define('MY_VAR', 'default value')" INSIDE a class definition does not work as expected.
+        You have to use the PHP keyword 'const' and initialize it with a scalar value -- boolean, int,
+        float, string (or array in PHP 5.6+) -- right away.
+    * By convention, constant identifiers are always uppercase.
+- [x] Print the constant on the screen.
+    * It is possible to define constants on a per-class basis remaining the same and unchangeable. The default visibility of class constants is public.
+
+ class MyClass
+ {
+ const CONSTANT = 'constant value';
+    function showConstant() {
+        echo  self::CONSTANT . "\n";
+    }
+ }
+ echo MyClass::CONSTANT . "\n";
+ $classname = "MyClass";
+ echo $classname::CONSTANT . "\n";
+ $class = new MyClass();
+ $class->showConstant();
+ echo $class::CONSTANT."\n";
+
+https://www.php.net/manual/en/language.oop5.constants.php
+
 - [] Create a function in beverage and use the constant.
+    * Assigning a function expression to a const variable ensures that the function definition is unchanged
+    because you cannot change the const variable.
+
+     //using const function expression
+        const constSumFn = function(a,b) {
+        return a + b;
+        }
+        constSumFn(1,3); // 4
+
+https://www.delftstack.com/howto/javascript/const-function-expression-in-javascript/
+
 - [] Do the same in the beer class.
 - [] Print the output of these functions on the screen.
 - [] Make sure that every print is on a new line.

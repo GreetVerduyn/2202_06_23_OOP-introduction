@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-
+// class Beverage
 class Beverage {
     public string $color;
     public float $price;
@@ -34,8 +34,7 @@ Try to get this error on the screen= Fatal error: Uncaught Error: Call to undefi
 USE TYPEHINTING EVERYWHERE!
 */
 
-echo 'extending test';
-
+// class Beer
 class Beer extends Beverage {
     public string $name;
     public float $alcoholPercentage;
@@ -45,14 +44,16 @@ class Beer extends Beverage {
         $this->name = $name;
         $this->alcoholPercentage = $alcoholPercentage;
     }
+    // this 'getter', returns a float of the alcohol percentage
     public function getAlcoholPercentage():float {
         return $this->alcoholPercentage;
     }
 
 }
 
-
+// Initialize the class
 $duvel=new Beer("Duvel", 8.5,3.5, "blond");
+
 $duvel->get_info();
 echo "<br>";
 echo $duvel->getAlcoholPercentage();

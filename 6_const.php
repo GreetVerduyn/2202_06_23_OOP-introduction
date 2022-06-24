@@ -8,6 +8,7 @@ Copy the classes of exercise 2.
 TODO: Change the properties to private.
 TODO: Make a const barname with the value 'Het Vervolg'.
 TODO: Print the constant on the screen.
+
 TODO: Create a function in beverage and use the constant.
 TODO: Do the same in the beer class.
 TODO: Print the output of these functions on the screen.
@@ -28,10 +29,12 @@ class Beverage {
     public function get_info(): void {
         echo "This beverage is $this->temperature and $this->color";
     }
+    function showName() {
+        echo  self::BARNAME . "\n";
+    }
+const BARNAME = "Het Vervolg";
+
 }
-
-
-echo 'extending test';
 
 class Beer extends Beverage {
     private string $name;
@@ -47,7 +50,5 @@ class Beer extends Beverage {
     }
 
 }
-define("BARNAME", "Het Vervolg");
 
-echo BARNAME;
-
+echo Beverage::BARNAME;

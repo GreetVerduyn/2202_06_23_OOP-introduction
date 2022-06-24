@@ -35,6 +35,8 @@ class Beverage {
     }
 
 }
+// Initialize the class
 $cola=new Beverage(2,"pink");
+
 $cola->newPrice(3.5);
 $cola->showPrice();

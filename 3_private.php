@@ -63,8 +63,9 @@ class Beer extends Beverage {
     }
 }
 
-
+// Initialize the class
 $duvel=new Beer("Duvel", 8.5,3.5, "blond");
+
 $duvel->get_info();
 echo "<br>";
 echo $duvel->getAlcoholPercentage();
