@@ -1,7 +1,21 @@
 <?php
 
-
 declare(strict_types=1);
+
+class Beverage {
+    public string $color;
+    public float $price;
+    public string $temperature;
+
+    public function __construct(float $price, string $color) {
+        $this->price= $price;
+        $this->color= $color;
+        $this->temperature ="cold";
+    }
+    public function get_info(): void {
+        echo "This beverage is $this->temperature and $this->color";
+    }
+}
 
 /* EXERCISE 2
 
@@ -21,3 +35,29 @@ USE TYPEHINTING EVERYWHERE!
 */
 
 echo 'extending test';
+
+class Beer extends Beverage {
+    public string $name;
+    public float $alcoholPercentage;
+
+    public function __construct(string $name, float $alcoholPercentage, float $price, string $color) {
+        parent:: __construct($price, $color);
+        $this->name = $name;
+        $this->alcoholPercentage = $alcoholPercentage;
+    }
+    public function getAlcoholPercentage():float {
+        return $this->alcoholPercentage;
+    }
+
+}
+
+
+$duvel=new Beer("Duvel", 8.5,3.5, "blond");
+$duvel->get_info();
+echo "<br>";
+echo $duvel->getAlcoholPercentage();
+echo "<br>";
+echo $duvel->alcoholPercentage;
+echo "<br>";
+echo $duvel->color;
+echo "<br>";

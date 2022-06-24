@@ -48,7 +48,24 @@ USE TYPEHINTING EVERYWHERE!
 */
 
 ### 🌱 Must haves - digging deeper
-- [Exercise 3](exercise_3_private.php)
+-
+/* EXERCISE 3
+
+[x] Copy the code of exercise 2 to here and delete everything related to cola.
+[x] Make all properties private.
+[x] Make all the other prints work without error. 
+      I had to make $color "protected" ipv "private".
+[x] After fixing the errors. Change the color of Duvel to light instead of blond and also print this new color on the screen after all the other things that were already printed (to be sure that the color has changed).
+      VOID !!!!
+[x] Create a new private method in the Beer class called beerInfo which returns "Hi i'm Duvel and have an alcochol percentage of 8.5 and I have a light color."
+
+Make sure that you use the variables and not just this text line.
+
+[x] Print this method on the screen on a new line.
+      I had to make a public function te call the private function
+
+USE TYPEHINTING EVERYWHERE!
+*/
 - [Exercise 4](exercise_4_protected.php)
 - [Exercise 5](exercise_5_public.php)
 
