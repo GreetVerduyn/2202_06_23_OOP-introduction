@@ -32,7 +32,6 @@ Private - Can only be accessed within the class +
 Protected - Can be accessed by the class declared it and by the classes that inherit the above declared class.`
 
 
-
 ### EXERCISE 1
 
 - [x] Create a class beverage `a class starts with a capital!!!`
@@ -92,6 +91,7 @@ Copy the code of exercise 2 to here and delete everything related to cola.
 - [x]: Make all properties protected.
 - [x]: Make all the other prints work without error without changing the beverage class.
     I had to make a public function te call the private function
+
 USE TYPEHINTING EVERYWHERE!
 
 
@@ -138,18 +138,7 @@ Copy the classes of exercise 2.
 
 https://www.php.net/manual/en/language.oop5.constants.php
 
-- [] Create a function in beverage and use the constant.
-    * Assigning a function expression to a const variable ensures that the function definition is unchanged
-    because you cannot change the const variable.
-
-     //using const function expression
-        const constSumFn = function(a,b) {
-        return a + b;
-        }
-        constSumFn(1,3); // 4
-
-https://www.delftstack.com/howto/javascript/const-function-expression-in-javascript/
-
+- [x] Create a function in beverage and use the constant.
 - [] Do the same in the beer class.
 - [] Print the output of these functions on the screen.
 - [] Make sure that every print is on a new line.
