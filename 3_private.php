@@ -20,7 +20,7 @@ USE TYPEHINTING EVERYWHERE!
 
 
 class Beverage {
-    protected string $color;
+    private string $color;
     private float $price;
     private string $temperature;
 
@@ -31,6 +31,12 @@ class Beverage {
     }
     public function get_info(): void {
         echo "This beverage is $this->temperature and $this->color";
+    }
+    public function getColor():string{
+        return $this->color;
+    }
+    public function setColor(string $color):void {
+        $this->color = $color;
     }
 }
 
@@ -47,14 +53,9 @@ class Beer extends Beverage {
     public function getAlcoholPercentage():float {
         return $this->alcoholPercentage;
     }
-    public function getColor():string{
-        return $this->color;
-    }
-    public function setColor(string $color):void {
-        $this->color = $color;
-    }
+
     private function beerInfo():void {
-       echo "Hi i'm $this->name and have an alcohol percentage of $this->alcoholPercentage and I have a $this->color color.";
+       echo "Hi i'm $this->name and have an alcohol percentage of $this->alcoholPercentage and I have a". $this->getColor() ."color.";
     }
     function infoBeer()
     {
@@ -68,9 +69,9 @@ $duvel->get_info();
 echo "<br>";
 echo $duvel->getAlcoholPercentage();
 echo "<br>";
-echo $duvel->getcolor();
+echo $duvel->getColor();
 echo "<br>";
-$duvel->setcolor("light");
+$duvel->setColor("light");
 echo $duvel->getcolor();
 echo "<br>";
 $duvel->infoBeer();

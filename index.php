@@ -12,8 +12,14 @@ if(isset($_GET['page'])){
         case '3_private' :
             require '3_private.php';
             break;
-       case '4_protected.php' :
+       case '4_protected' :
             require '4_protected.php';
+            break;
+       case '5_public' :
+            require '5_public.php';
+            break;
+       case '6_const' :
+            require '6_const.php';
             break;
         default :
             echo 'hmmm give me a page sicco';
