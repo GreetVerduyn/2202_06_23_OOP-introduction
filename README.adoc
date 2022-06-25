@@ -146,9 +146,35 @@ https://www.php.net/manual/en/language.oop5.constants.php
     * using echo "<br>" between each echo
 
 Use typehinting everywhere!
-*/
 
-- [Exercise 7](exercise_7_static.php)
+
+
+EXERCISE 7
+
+Copy your solution from exercise 6
+
+- [x] Make a static property in the Beverage class that can only be accessed from inside the class called address which has the value "Melkmarkt 9, 2000 Antwerpen".
+
+`Static properties can be called directly - without creating an instance of a class`
+
+- [] Print the address without creating a new instant of the beverage class 2 times in two different ways.
+
+`To access a static property use the class name, double colon (::), and the property name:`
+
+ ClassName::$staticProp
+
+`Static methods can be called directly - without creating an instance of the class first.`
+
+ <?php
+ class ClassName {
+ public static function staticMethod() {
+ echo "Hello World!";
+ }
+ }
+ ?>
+ To access a static method use the class name, double colon (::), and the method name:
+ ClassName::staticMethod();`
+*/
 
 ## An example
 
@@ -174,7 +200,7 @@ const listOfAnimals = [
 ```
 
 Instead of having to create this data ourselves in the format above, we can make use of OOP structures.
-With OOP we would create a class `Animal`, that class will serve as some sort of "blueprint" for creating animals.
+With OOP we would create a class Animal, that class will serve as some sort of "blueprint" for creating animals.
 Think of it as similar to an object, but on steroids.
 
 #### Step one: the blueprint (class)

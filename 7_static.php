@@ -1,17 +1,14 @@
 <?php
 
 declare(strict_types=1);
-/* EXERCISE 6
 
-Copy the classes of exercise 2.
+/* EXERCISE 7
 
-TODO: Change the properties to private.
-TODO: Make a const barname with the value 'Het Vervolg'.
-TODO: Print the constant on the screen.
-TODO: Create a function in beverage and use the constant.
-TODO: Do the same in the beer class.
-TODO: Print the output of these functions on the screen.
-TODO: Make sure that every print is on a new line.
+Copy your solution from exercise 6
+
+TODO: Make a static property in the Beverage class that can only be accessed from inside the class called address which has the value "Melkmarkt 9, 2000 Antwerpen".
+TODO: Print the address without creating a new instant of the beverage class 2 times in two different ways.
+
 
 Use typehinting everywhere!
 */
@@ -20,6 +17,7 @@ class Beverage {
     private float $price;
     private string $temperature;
     const BARNAME = "Het Vervolg";
+    public static string $adress="Melkmarkt 9, 2000 Antwerpen";
 
     public function __construct(float $price, string $color) {
         $this->price= $price;
@@ -29,8 +27,11 @@ class Beverage {
     public function get_info(): void {
         echo "This beverage is $this->temperature and $this->color";
     }
-    function showPlace():void {
+    public function showPlace():void {
         echo  self::BARNAME . "\n";
+    }
+    public static function adress():string {
+        return self::$adress;
     }
 }
 
@@ -59,6 +60,8 @@ $soda =new Beverage(3, 'white');
 $soda -> showPlace();
 echo "<br>";
 $jupiler = new Beer('Jupiler', 8, 3.5, 'orange');
-echo "<br>";
 $jupiler -> place();
-
+echo "<br>";
+echo Beverage::$adress;
+echo "<br>";
+echo Beverage::adress();

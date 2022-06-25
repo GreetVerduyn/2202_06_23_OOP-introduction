@@ -18,8 +18,9 @@ if(isset($_GET['page'])){
        case '5_public' :
             require '5_public.php';
             break;
-       case '6_const' :
-            require '6_const.php';
+
+        case '7_static' :
+            require '7_static.php';
             break;
         default :
             echo 'hmmm give me a page sicco';
